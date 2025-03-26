@@ -1,5 +1,12 @@
+import java.util.ArrayList;
 public class Player{
-     protected String  name;  
+    ArrayList<Player> freeAgents = new ArrayList<>();
+    private int salary;
+    private int moral;
+    private String position;
+    //private action(){
+        //show stats?, as the other classes will override eventually
+    //}     protected String  name;  
 
      public Player(){ 
         name = "genericPlayer"; 
