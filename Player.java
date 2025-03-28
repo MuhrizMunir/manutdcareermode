@@ -7,12 +7,14 @@ public class Player{
     //private action(){
         //show stats?, as the other classes will override eventually
     //}     protected String  name;  
-
-     public Player(){ 
-        name = "genericPlayer"; 
-     } 
-     public Player(String a){ 
-        name = a; 
-     }
+        public Player(){ 
+         
+        }
+   //   public Player(){ 
+   //      name = "genericPlayer"; 
+   //   } 
+   //   public Player(String a){ 
+   //      name = a; 
+   //   }
     
 }
