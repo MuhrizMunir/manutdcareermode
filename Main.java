@@ -2,11 +2,14 @@ public class Main {
 
 	public static void  main(String[] args){
 
-		System.out.println("yo");
-		System.out.println("Hello, World!");
-		System.out.println("h"); 
-		Game mygame = new Game();    
-		mygame.showGoal();
+		// Game mygame = new Game();    
+		// mygame.showGoal();
+		Player rnd = new Player();
+		System.out.println(rnd.stats());
+		Player bruno = new Player("Bruno", "Midfielder", 99, 1000);
+		System.out.println(bruno.stats());
+		MyTeam manutd = new MyTeam();
+
 
 	}
 }
