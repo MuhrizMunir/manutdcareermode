@@ -1,18 +1,19 @@
 public class Game{
     private static  int[][] goal  = new int[3][4];  
-    private static String[][] goal2 = new String[3][4]; 
+    private static String[][] goal2 = { 
+       
+        
+
+    };
     private static  int i1 = 0; 
     private  static int i2 = 0;   
     private  static  boolean shooting;  
     private static boolean[] userscore = new boolean[5]; 
     private  static boolean[] npcscore = new boolean[5]; 
     
-    // String multilineString = "" 
-    //                               \\ o / 
-    //                                  | 
-    //                                 / \\     
-    //                                ""; 
-                    
+    //  String gkr = " \\ o / \n     |  \n   / \\ "; 
+
+     
 
     
 // games 
@@ -35,30 +36,45 @@ public class Game{
             System.out.println(); 
         } 
     }
-    public static void run1(TestOutfielder plr, int a,int shot){ 
+    public static boolean run1( int a,int shot){ 
         int index = (int)((Math.random()*12)+1);  
         if(index == a){
             userscore[shot] = false;  
+            return false;  
         } 
         else {
             userscore[shot] = true;  
+             return true; 
         } 
-        showGoal();
-         
+        
 
     } 
-    public static void run2(TestOutfielder plr,int a, int shot){ 
+    public static boolean run2(int a, int shot){ 
         int index = (int)((Math.random()*12)+1);  
         if(index == a){
-            npcscore[shot] = false; 
+            npcscore[shot] = false;  
+            return false; 
         }  
         else{
-            npcscore[shot] = true;   
-        }  
-        showGoal(); 
+            npcscore[shot] = true; 
+            return true;    
+        }   
 
-        
+      
          
+    }   
+    public static void showBoth(){ 
+        for(int i =0;i<5;i++){ 
+            System.out.print("["+userscore[i]+"]");
+        } 
+        System.out.println(); 
+        for(int i =0;i<5;i++){ 
+            System.out.print("["+npcscore[i]+"]");
+        } 
     }
+         
+
+  
+    
     
 }
