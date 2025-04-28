@@ -40,7 +40,10 @@ public class Game{
         } 
     }
     public static boolean run1( int a,int shot){ 
-        int index = (int)((Math.random()*12)+1);  
+        int index = (int)((Math.random()*5));   
+        if(index == 1){ 
+            index =a; 
+        }
         if(index == a){
             userscore[shot] = false;  
             uservisual[shot] = "❌"; 
@@ -55,7 +58,10 @@ public class Game{
 
     } 
     public static boolean run2(int a, int shot){ 
-        int index = (int)((Math.random()*12)+1);  
+        int index = (int)((Math.random()*5)); 
+        if(index == 1){ 
+            index =a; 
+        }  
         if(index == a){
             npcscore[shot] = false; 
             npcvisual[shot] = "❌"; 
@@ -79,35 +85,15 @@ public class Game{
             System.out.print("["+npcvisual[i]+"]");
         } 
     } 
-    static char[][] goalGrid = {
-        { ' ', ' ', ' ' },
-        { ' ', ' ', ' ' }
-    };
-
-    public static void showGoalVisual() {
-        System.out.println("  _________");
-        for (int i = 0; i < 2; i++) {
-            System.out.print(" |");
-            for (int j = 0; j < 3; j++) {
-                int index = i * 3 + j;
-                System.out.print(" " + (goalGrid[i][j] == ' ' ? index : goalGrid[i][j]) + " |");
-            }
-            System.out.println();
-            System.out.println(" |___|___|___|");
-        }
-    }
-
-    public static void updateGoal(int index, char symbol) {
-        int row = index / 3;
-        int col = index % 3;
-        goalGrid[row][col] = symbol;
-    }
+    
 
     public static void resetGoal() {
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 3; j++) {
-                goalGrid[i][j] = ' ';
-            }
+        for (int i = 0; i < uservisual.length; i++) { 
+            uservisual[i]="*"; 
+            npcvisual[i]="*";  
+            userscore[i]= false; 
+            npcscore[i] = false; 
+            
         }
     }
         
