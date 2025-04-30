@@ -1,16 +1,17 @@
- import java.util.Scanner; 
+ import java.util.ArrayList;
+import java.util.Scanner; 
  public class Tools { 
     String ball = "⚽";  
 		String save = "🧤 "; 
 		String miss = "❌"; 
 		String goal = "✅"; 
-    public static void playGame(Scanner scanner){ 
+    public static void playGame(Scanner scanner, ArrayList<Player> team ){ 
         for(;;){ 
 			System.out.println("Your enagaged in an intense penalty shootout to win the game. Whoever scores more goals in 5 shots wins. Otherwise overtime");
 			int c1 = 0; 
 			 while(c1<5){
 		
-			System.out.println("Your turn to shoot. Your "+c1+" player is shooting");  
+			//System.out.println("Your turn to shoot. Your "+team.get(c1)+" player is shooting");  
 			System.out.println("Pick an index where you want the player to shoot the ball, be carefull though, the opposing keeper might save your shot");
 			Game.showGoal(); 
 			int sc1 = scanner.nextInt(); 

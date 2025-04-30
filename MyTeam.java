@@ -1,6 +1,11 @@
 import java.util.ArrayList;
+<<<<<<< HEAD
 public class MyTeam extends Team{
     private ArrayList<Player> myTeam = new ArrayList<>();
+=======
+public class MyTeam{
+    public ArrayList<Player> myTeam = new ArrayList<>();
+>>>>>>> fc5f0c3 (//changed main)
        
     public MyTeam(){
         Player onana = new Player("Onana", "Goalkeeper", 99, 1000);
@@ -30,6 +35,7 @@ public class MyTeam extends Team{
 
     public String getStats(Player p){
         return p.stats();
+<<<<<<< HEAD
     }
     public String toString(){
         for(int i =0; i<myTeam.size(); i++){
@@ -37,5 +43,13 @@ public class MyTeam extends Team{
         }
         return"";
     }
+=======
+    } 
+    
+    // public String stats(){
+    //     return "Hi";
+    // }
+    //set roster using for loop
+>>>>>>> fc5f0c3 (//changed main)
     
 }
