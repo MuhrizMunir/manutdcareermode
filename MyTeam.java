@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-public class MyTeam{
-    ArrayList<Player> myTeam = new ArrayList<>();
+public class MyTeam extends Team{
+    private ArrayList<Player> myTeam = new ArrayList<>();
        
     public MyTeam(){
         Player onana = new Player("Onana", "Goalkeeper", 99, 1000);
@@ -26,16 +26,16 @@ public class MyTeam{
         myTeam.add(zirkzee);
         myTeam.add(garnacho);
         myTeam.add(hojlund);
-        
-        System.out.println(myTeam);
     }
-    
+
     public String getStats(Player p){
         return p.stats();
     }
-    // public String stats(){
-    //     return "Hi";
-    // }
-    //set roster using for loop
+    public String toString(){
+        for(int i =0; i<myTeam.size(); i++){
+            System.out.println(myTeam.get(i));
+        }
+        return"";
+    }
     
 }

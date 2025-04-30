@@ -4,6 +4,7 @@ import java.util.Scanner;
 		//System.out.print("\033[H\033[2J");
     	//System.out.flush();
 	public static void  main(String[] args){ 
+		//notes
 		//scanner initialization
 		Scanner scanner = new Scanner(System.in);
 		//emojis for different results
@@ -14,10 +15,13 @@ import java.util.Scanner;
 		//empty screen
 		// System.out.print("\033[H\033[2J");
     	// System.out.flush();
-		
-		Player mo = new Player();
-		System.out.println(mo.toString());
+		//end notes
 
+
+		MyTeam manutd = new MyTeam();
+		manutd.toString();
+
+		//game implementation
 		// Game mygame = new Game();  
 		// mygame.loadingScreen();
 		// //game intro

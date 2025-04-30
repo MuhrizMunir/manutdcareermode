@@ -1,16 +1,18 @@
-public class Goalkeeper extends Player{
+public class Outfielder extends Player{
     // Default constructor
-    public Goalkeeper() {
+    public Outfielder() {
         super();
-        setPosition("Goalkeeper");
+        String[] outfieldPositions = {"Defender", "Midfielder", "Striker"};
+        String chosen = outfieldPositions[(int)(Math.random() * outfieldPositions.length)];
+        setPosition(chosen);
     }
 
     //constructor
-    public Goalkeeper(String name, int ovr, int salary) {
-        super(name, "Goalkeeper", ovr, salary);
+    public Outfielder(String name, String position, int ovr, int salary) {
+        super(name, position, ovr, salary);
     }
 
-    // Overridden getters and setters
+    //getters and setters
     @Override
     public String getName() {
         return super.getName();
@@ -55,5 +57,4 @@ public class Goalkeeper extends Player{
     public String toString() {
         return super.toString();
     }
-    
 }

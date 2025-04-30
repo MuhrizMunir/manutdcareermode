@@ -5,12 +5,10 @@ public class Player{
     private int ovr;
     private String position;
     private String name;
-    String[] positions = {"Goalkeeper", "Defender", "Midfielder", "Striker"};
-    String randomPosition;
-    //private action(){
-        //show stats?, as the other classes will override eventually
-    //}     protected String  name;  
-
+    protected String[] positions = {"Goalkeeper", "Defender", "Midfielder", "Striker"};
+    private String randomPosition;
+    
+    //default constructor
      public Player(){ 
         randomPosition = positions[(int)(Math.random()*3)];
         name = "genericPlayer";
@@ -18,6 +16,7 @@ public class Player{
         ovr = (int)(Math.random()*51)+50;
         salary =(int)(Math.random()*501)+500;
      } 
+     //constructor
      public Player(String a, String p, int o, int s){ 
         name = a; 
         position = p;
@@ -61,7 +60,6 @@ public class Player{
     }
 
     // toString method
-    @Override
     public String toString(){
         return "Player Name: " + name + "\nPosition: " + position + "\nOverall: " + ovr + "\nSalary: $" + salary;
     }
