@@ -96,6 +96,70 @@ public class Game{
             
         }
     }
+    public String loadingScreen(){
+        //loading screen
+		String load = "\t\t\t\tLoading . . .";
+		String load1 = "\t\t\t\tInitializing all game features . . .";
+		String load2 = "\t\t\t\tCreating teams . . .";
+		String load3 = "\t\t\t\tMowing the pitch . . .";
+		String load4 = "\t\t\t\tWarming up the bench . . .";
+		String load5 = "\t\t\t\tPlayers are stretching . . .";
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load1);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load2);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load3);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load4);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+		System.out.println(load5);
+		try {
+			Thread.sleep(1000);
+		} catch(InterruptedException e) {
+		System.out.println("error");
+		}
+		System.out.print("\033[H\033[2J");
+    	System.out.flush();
+        return "";
+		//end of loading screen
+    }
+    public String introScreen(){
+        return "";
+    }
         
     
 

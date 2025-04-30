@@ -24,11 +24,46 @@ public class Player{
         ovr = o;
         salary = s;
      }
-     public String stats(){
-         return "Player Name: " + name + "\nPosition: " + position + "\nOverall: " + ovr + "\nSalary: $" + salary;
-     }
-     public String toString(){
-         return name;
-     }
+     // Getter and Setter for salary
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    // Getter and Setter for ovr
+    public int getOvr() {
+        return ovr;
+    }
+
+    public void setOvr(int ovr) {
+        this.ovr = ovr;
+    }
+
+    // Getter and Setter for position
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    // Getter and Setter for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // toString method
+    @Override
+    public String toString(){
+        return "Player Name: " + name + "\nPosition: " + position + "\nOverall: " + ovr + "\nSalary: $" + salary;
+    }
     
 }
