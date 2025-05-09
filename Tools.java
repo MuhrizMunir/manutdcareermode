@@ -30,7 +30,7 @@
 			System.out.println();  
 			System.out.println("Now its time to save your oppenents shot, pick an index where you guess your opponent is going to shoot"); 
 			Game.showGoal();  
-			System.out.println("pick save  index");
+			System.out.println("pick save index");
 			int sc2 = scanner.nextInt(); 
 			if(Game.run2(sc2,c1) == true){ 
 				System.out.println("⚽");  
@@ -56,7 +56,7 @@
 				
 			} 
 			if(c2 > c3) 
-				System.out.println("Congradulations, you beat your opponent, on to the next round"); 
+				System.out.println("congratulations, you beat your opponent, on to the next round"); 
 
 			else if(c3>c2) 
 				System.out.println("You lost, how unfournate. Better luck next year");  
@@ -104,14 +104,14 @@
 		}  
 		else{
 			System.out.println( "🧤"); 
-			System.out.println("You saved it, congradulations ");  
+			System.out.println("You saved it, congratulations ");  
 			Game.showBoth();  
 			
 		}  
 		if(Game.userscore[c1] == true && Game.npcscore[c1]== false) 
 			System.out.println("You Won!, what an exciting overtime win");  
 		else if(Game.userscore[c1] == false && Game.npcscore[c1]== true)
-			System.out.println(" Unforunate , overtime losses are always the worst");  
+			System.out.println(" Unfortunate , overtime losses are always the worst");  
 		else 
 			Tools.overtime(scanner); 
 		

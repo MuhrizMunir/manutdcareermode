@@ -16,31 +16,47 @@ import java.util.Scanner;
 		// System.out.print("\033[H\033[2J");
     	// System.out.flush();
 		//end notes
-
-
-		MyTeam manutd = new MyTeam();
-		manutd.toString();
-
-		//game implementation
-		// Game mygame = new Game();  
-		// mygame.loadingScreen();
+		MyTeam manUtd = new MyTeam();
+		NPCTeam chelsea = new NPCTeam();
+		Game game = new Game();  
+		
+		//game intro
+		game.loadingScreen();
 		// //game intro
-		// System.out.println("Welcome to the game, young manager! What is your name?");
-		// String managerName = scanner.nextLine(); 
-		// System.out.print("\033[H\033[2J");
-    	// System.out.flush();
-		// System.out.println(managerName+" you will be managing the greatest team ever, Manchester United! \nBe prepared to sign and fire players, motivate your team to victory, and take actions in the game to secure us the ultimate trophy!");
-		// System.out.println("What actions do you want to take? Input the number corresponding to your selection.");
-		// System.out.println("1. Play the final\n2. Check your lineup\n3.\n4.\n5.\n6.\n7.Quit game");
-		// action = scanner.nextLine().trim();
+		System.out.println("Welcome to the game, young manager! What is your name?");
+		String managerName = scanner.nextLine(); 
+		Manager name = new Manager(managerName);
+		game.introScreen(managerName);
+		game.optionList();
+		String action = scanner.nextLine().trim();
 		
-		
+		while(!(action.equals("5"))){
+			if(action.equals("1")){
+				System.out.print("\033[H\033[2J");
+    			System.out.flush();
+				Tools.playGame(scanner); 
+			}
+			else if(action.equals("2")){
+				System.out.print("\033[H\033[2J");
+    			System.out.flush();
+				manUtd.toString();
+			}
+			else if(action.equals("3")){
+				chelsea.getStats();
+			}
+			else if(action.equals("4")){
+				System.out.println(name.toString());
+			}
+			game.optionList();
+			action = scanner.nextLine().trim();
+		}
+		System.out.println("Goodbye!");
 		
 		
 		  
 		// Game.showGoal();  
 		// String gkr1 = " \\ o / \n   |  \n  / \\ ";
-		// Tools.playGame(scanner);  	
+		 	
 		// System.out.println(ball + save + miss + goal);
 		
 		

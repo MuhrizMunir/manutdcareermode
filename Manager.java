@@ -2,9 +2,9 @@ public class Manager{
     private int budget;
     private String name;
     //constructor
-    public Manager(String name, int budget){
+    public Manager(String name){
         this.name = name;
-        this.budget = budget;
+        budget = (int)(Math.random()*900)+100;
     }
     // Getter for budget
     public int getBudget() {

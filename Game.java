@@ -157,7 +157,15 @@ public class Game{
         return "";
 		//end of loading screen
     }
-    public String introScreen(){
+    public String introScreen(String managerName){
+        System.out.print("\033[H\033[2J");
+    	System.out.flush();
+        System.out.println(managerName+" you will be managing the greatest team ever, Manchester United! \nBe prepared to sign and fire players, motivate your team to victory, and take actions in the game to secure us the ultimate trophy!");
+        return "";
+    }
+    public String optionList(){
+        System.out.println("What actions do you want to take? Input the number corresponding to your selection.");
+		System.out.println("1. Play the final\n2. Check your lineup\n3. Scout the other team \n4. Check your budget\n5. Quit game");
         return "";
     }
         
