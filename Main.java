@@ -34,7 +34,7 @@ import java.util.Scanner;
 			if(action.equals("1")){
 				System.out.print("\033[H\033[2J");
     			System.out.flush();
-				Tools.playGame(scanner); 
+				Tools.playGame(scanner, null); 
 			}
 			else if(action.equals("2")){
 				System.out.print("\033[H\033[2J");
